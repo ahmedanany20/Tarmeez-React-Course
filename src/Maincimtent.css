@@ -1,0 +1,9 @@
+.mycontent {
+    height: 100vh;
+    background-color: rgba(234, 236, 238, 0.509);
+   display: flex;
+   gap: 10px;
+   justify-content: space-around;
+   align-items: flex-start;
+
+}

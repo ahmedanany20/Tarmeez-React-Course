@@ -1,0 +1,31 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.post {
+    background-color: blueviolet;
+    border: 1px solid blueviolet;
+    border-radius: 6px;
+    margin-top: 5px;
+    flex: 1;
+}
+
+.side {
+    height: 500px;
+    background-color: aquamarine;
+    width: 400px;
+   display: grid;
+  grid-template-columns: repeat(2, minmax(20px, 1fr));
+  justify-content: space-around;
+}
+
+.btn {
+    
+    background-color: brown;
+    justify-self: start;
+    align-self:center;
+    margin-left: 10px;
+}
