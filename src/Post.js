@@ -1,16 +1,12 @@
-import "./Posts.css"
-
-
 export default function Post(){
-
-
     return (
-        <div className="post">
-            <h1>This is Post Title</h1>
+        <div>
+            <h2> The is the post tilte </h2>
             <hr></hr>
             <p>
-                this is post body
+                thsi is the post
             </p>
         </div>
+
     )
 }

@@ -1,12 +1,13 @@
 import "./App.css";
-import Header from "./header";
-import MainContent from "./MainConten.js"
+import Header from "./header";  
+import Post from "./Post";
+
 
 function App() {
   return (
       <div>
         <Header />
-        <MainContent/>
+        <Post />
       </div>
       
       
