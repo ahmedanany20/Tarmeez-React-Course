@@ -16,8 +16,8 @@ function App() {
 
           {/* posts container */}
         <div style={{width:"70%"}}>
-          <Post />
-          <Post />
+          <Post name="post for prps" />
+          <Post/>
           <Post />
           <Post />
         </div>

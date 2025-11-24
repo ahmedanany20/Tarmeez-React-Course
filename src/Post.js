@@ -1,4 +1,4 @@
-export default function Post(){
+export default function Post(props){
     return (
         <div style={
             {
@@ -7,6 +7,7 @@ export default function Post(){
                 margin:"10%"
             }
         }>
+            <h1>{props.name ?  props.name: ""}</h1>
             <h2> The is the post tilte </h2>
             <hr></hr>
             <p>
