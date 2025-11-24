@@ -11,7 +11,7 @@ function App() {
         <Header />
         {/* posts and side menu */}
         
-        <div style={{display:"flex", width:"100%", justifyContent:"space-between", alignItems:"center"}}>
+        <div style={{display:"flex", width:"60%", justifyContent:"center", alignItems:"center"}}>
           
 
           {/* posts container */}
