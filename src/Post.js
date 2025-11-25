@@ -1,18 +1,15 @@
-export default function Post(props){
+export default function Post({name , children}){
     return (
+        
         <div style={
             {
                 padding:"10px",
                 border:"solid teal 5px",
-                margin:"10%"
+                margin:"10%",
+                textAlign:"center"
             }
         }>
-            <h1>{props.name ?  props.name: ""}</h1>
-            <h2> The is the post tilte </h2>
-            <hr></hr>
-            <p>
-                thsi is the post
-            </p>
+            {children}
         </div>
 
     )

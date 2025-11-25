@@ -16,10 +16,37 @@ function App() {
 
           {/* posts container */}
         <div style={{width:"70%"}}>
-          <Post name="post for prps" />
-          <Post/>
-          <Post />
-          <Post />
+          <Post>
+            <h1>20</h1>
+            <h1>اكادميه ترميز</h1>
+            <hr></hr>
+            <p>
+              اكادميه مخصصه لعلم البرمجه
+            </p>
+
+          </Post>
+
+          <Post>
+            <h1>
+              Post2
+            </h1>
+            <hr></hr>
+            <p>
+              Heloo worled from post 2
+            </p>
+
+          </Post>
+
+          <Post>
+            <h1 style={{backgroundColor:"burlywood"}}>
+              Heloo worled from post 3
+            </h1  >
+            <hr></hr>
+            <p>
+              This post 3
+            </p>
+
+          </Post>
         </div>
         {/* posts container */}
         {/* side menu */} 
