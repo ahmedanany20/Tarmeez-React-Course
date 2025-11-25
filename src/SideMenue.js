@@ -1,23 +1,23 @@
 import Button from "./TagButtons"
-import logo from './logo192.png';
 
 
 
 export default function SideMenu(){
+    const categories = [
+        {id :1 , title:"New"},
+        {id :2 , title:"Home"},
+        {id :3 , title:"About"},
+        {id :4 , title:"Contact", c : (<div>😊😊😊😊</div>)}
+    ]
+    const categoryElements = categories.map(category =>{
+        return <Button key={category.id} title={category.title}>
+            {category.c}
+        </Button>
+    })
     return(
         <div style={{margin:"25px", border:"solid teal 5px"}} >
-            <Button>
-                <h1>New</h1>
-
-            </Button>
-            <Button>
-                <h1>Home</h1>
-        
-                <img src={logo} alt="" style={{width:"20px", height:"20px"}}/>
-
-            </Button>
-            <Button></Button>
-           
+            
+            {categoryElements}
         </div>
     )
 }

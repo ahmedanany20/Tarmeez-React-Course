@@ -6,47 +6,26 @@ import SideMenu from "./SideMenue";
 
 
 function App() {
+  const posts =[
+    {id:1, postName:'post1', postBody:'post 1body'},
+    {id:2, postName:'post2', postBody:'post 2body'},
+    {id:3, postName:'post3', postBody:'post 3body'}
+  ]
+
+  const postElements = posts.map(post =>{
+    return <Post key={post.id} postName={post.postName} postBody={post.postBody}/>
+  })
   return (
       <div>
         <Header />
         {/* posts and side menu */}
         
-        <div style={{display:"flex", width:"60%", justifyContent:"center", alignItems:"center"}}>
+        <div style={{display:"flex", width:"100%", justifyContent:"center", alignItems:"center"}}>
           
 
           {/* posts container */}
         <div style={{width:"70%"}}>
-          <Post>
-            <h1>20</h1>
-            <h1>اكادميه ترميز</h1>
-            <hr></hr>
-            <p>
-              اكادميه مخصصه لعلم البرمجه
-            </p>
-
-          </Post>
-
-          <Post>
-            <h1>
-              Post2
-            </h1>
-            <hr></hr>
-            <p>
-              Heloo worled from post 2
-            </p>
-
-          </Post>
-
-          <Post>
-            <h1 style={{backgroundColor:"burlywood"}}>
-              Heloo worled from post 3
-            </h1  >
-            <hr></hr>
-            <p>
-              This post 3
-            </p>
-
-          </Post>
+          {postElements}
         </div>
         {/* posts container */}
         {/* side menu */} 

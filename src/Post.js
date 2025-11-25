@@ -1,4 +1,4 @@
-export default function Post({name , children}){
+export default function Post({postName , postBody}){
     return (
         
         <div style={
@@ -9,7 +9,14 @@ export default function Post({name , children}){
                 textAlign:"center"
             }
         }>
-            {children}
+            <h1>
+            {postName}
+            </h1>
+            <hr></hr>
+            <p>
+                {postBody}
+            </p>
+            
         </div>
 
     )
