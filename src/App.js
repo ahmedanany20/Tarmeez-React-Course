@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./header";  
 import Post from "./Post";
 import SideMenu from "./SideMenue";
+import MyForm from "./MyForm";
 
 
 
@@ -36,7 +37,13 @@ function App() {
         </div>
         
         {/* posts and side menu */}
+
+        {/* testform */}
+        <MyForm />
+        {/* testform */}
       </div>
+
+      
       
       
   
