@@ -1,0 +1,128 @@
+.container {
+    background-color: rgba(20, 20, 99, 0.555);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+form {
+    background-color: rgba(0, 0, 255, 0.493);
+    width: 65%;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    box-shadow: 5px 8px 15px 5px rgba(0, 0, 0, 0.5) ;
+    position: relative;
+}
+
+form label {
+    display: block;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+form input {
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    height: 25px;
+    width: 80%;
+    text-align: center;
+}
+
+form  select {
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    height: 25px;
+    width: 40%;
+    text-align: center;
+}
+
+form input:hover {
+    outline: none;
+    border: none;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form input[type='checkbox'] {
+    border-radius: 6px;
+    outline: none;
+}
+
+form button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    display: flex;
+    color: white;
+    background-color: rgba(37, 74, 117, 0.699);
+    border-radius: 6px;
+    font-size: larger;
+}
+
+form button:hover{
+    background-color: rgba(0, 255, 64, 0.486);
+}
+
+form button:disabled{
+    cursor:default;
+    color: rgba(105, 102, 97, 0.822);
+    background-color: rgba(160, 160, 160, 0.021);
+}
+
+form button:disabled:hover{
+    background-color: rgba(37, 74, 117, 0.699);
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.904);
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.popup {
+    width: 100%;
+    background-color: rgba(165, 42, 42, 0.877);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    
+}
+
+
+#modal {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.363);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#modal-content {
+    background-color: white;
+    width: 80%;
+    color: green;
+}
