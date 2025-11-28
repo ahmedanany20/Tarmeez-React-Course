@@ -1,7 +1,4 @@
 import "./App.css";
-import Header from "./header";  
-import Post from "./Post";
-import SideMenu from "./SideMenue";
 
 
 
