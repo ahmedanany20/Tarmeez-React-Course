@@ -1,5 +1,7 @@
 import "./App.css";
-import BankForm from "./BankForm";
+import Header from "./header";  
+import Post from "./Post";
+import SideMenu from "./SideMenue";
 
 
 
@@ -10,8 +12,10 @@ function App() {
         {/* Bank Form  */}
         <BankForm/>
         
-        {/* Bank Form  */}
+        {/* posts and side menu */}
       </div>
+
+      
       
       
   
