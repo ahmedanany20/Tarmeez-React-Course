@@ -75,11 +75,11 @@ form button:hover{
 form button:disabled{
     cursor:default;
     color: rgba(105, 102, 97, 0.822);
-    background-color: rgba(160, 160, 160, 0.021);
+    background-color: rgba(148, 142, 142, 0.664);
 }
 
 form button:disabled:hover{
-    background-color: rgba(37, 74, 117, 0.699);
+    background-color: rgba(148, 142, 142, 0.664);
 }
 
 .overlay {
