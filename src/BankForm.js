@@ -2,6 +2,9 @@ import "./BankForm.css";
 import { useState } from "react";
 import Modal from "./Modal";
 
+import {formDataContext} from "./contexts/formDataContext"
+
+
 export default function BankForm() {
     const [formData, setFormData] = useState({
         name: "",
@@ -53,10 +56,14 @@ export default function BankForm() {
       <form >
         <h1>Bank Form</h1>
         <hr></hr>
+
+        
         <label>Name:</label>
         <input type="text" name="name" placeholder="Enter your name"
         onChange={handleChange} value={formData.name}></input>
         <br></br>
+
+
         <label>Phone number:</label>
         <input
           type="text"
