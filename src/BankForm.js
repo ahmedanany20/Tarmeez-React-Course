@@ -1,11 +1,12 @@
 import "./BankForm.css";
 import { useState } from "react";
 import Modal from "./Modal";
-
-import {formDataContext} from "./contexts/formDataContext"
+import { useContext } from "react";
+import { UserContext } from "./contexts/UserContext";
 
 
 export default function BankForm() {
+  const userData = useContext(UserContext);
     const [formData, setFormData] = useState({
         name: "",
         phoneNumber: "",
@@ -53,6 +54,7 @@ export default function BankForm() {
     
     return (
     <div className="container" onClick={hadleDivClick}>
+      <h1>Hello {userData.name} </h1>
       <form >
         <h1>Bank Form</h1>
         <hr></hr>
