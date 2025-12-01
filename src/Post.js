@@ -10,6 +10,7 @@ export default function Post({postName, postBody}){
     const posts = useContext(PostsContext)
     const post = posts.find(post => post.id === parseInt(id))
     console.log(post)
+    if (postName || post){
     return (
         <>
         <div style={
@@ -32,5 +33,12 @@ export default function Post({postName, postBody}){
             
         </div>
         </>
-    )
+    )}else{
+        return(
+        <>
+        <h1>
+            The Post With id {id} Not found
+        </h1>
+        </>)
+    }
 }

@@ -11,7 +11,7 @@ export default function PostList(){
     console.log(posts)
 
     const postElements = posts.map(post =>{
-        return  (<Link key={post.id} to={`/post/${post.id}`}>
+        return  (<Link style={{textDecoration:"None", margin:"10px"}} key={post.id} to={`/post/${post.id}`}>
         <Post key={post.id}  postName={post.title} postBody={post.body}/>
         </Link>)
     })

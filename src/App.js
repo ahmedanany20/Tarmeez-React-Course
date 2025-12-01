@@ -5,6 +5,7 @@ import Hello from "./hello";
 import Post from "./Post";
 import {PostsContext} from "./contexts/PostsContexts"
 import { UserContext } from "./contexts/UserContext";
+import NotFound from "./NotFound";
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
   
   
   return (
-      <PostsContext.Provider value={postsData}>
+    <PostsContext.Provider value={postsData}>
     <Routes>
       <Route path="/hello" element={<Hello />} />
       <Route
@@ -41,6 +42,7 @@ function App() {
         }
       />
       <Route path="/post/:id" element={<Post />} />
+      <Route path="*" element={<NotFound/>}></Route>
 
     </Routes>
     </PostsContext.Provider>

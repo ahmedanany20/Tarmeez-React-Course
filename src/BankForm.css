@@ -126,3 +126,22 @@ form button:disabled:hover{
     width: 80%;
     color: green;
 }
+
+
+
+
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    display: flex;
+    color: white;
+    background-color: rgba(37, 74, 117, 0.699);
+    border-radius: 6px;
+    font-size: larger;
+}
+button:hover{
+    background-color: rgba(0, 255, 64, 0.486);
+}

@@ -7,7 +7,7 @@ export default function Hello(){
         <>
         <h1>
             Hello ahmed anany from hello component
-            <Link to="/">
+            <Link style={{textDecoration:"None", margin:"10px"}} to="/">
             <button >Go to bank loan form</button>
             </Link>
         </h1>

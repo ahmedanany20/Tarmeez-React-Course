@@ -3,6 +3,7 @@ import { useState } from "react";
 import Modal from "./Modal";
 import { useContext } from "react";
 import { UserContext } from "./contexts/UserContext";
+import { Link } from "react-router"; 
 
 
 export default function BankForm() {
@@ -92,7 +93,10 @@ export default function BankForm() {
       </form>
       {/* modal */}
       <Modal isVisible={modalData.isVisible} errorMassage={modalData.errorMassage}></Modal>
-
+      
+      <Link style={{textDecoration:"None", margin:"10px"}} to="/hello">
+      <button >Go to hello component</button>
+      </Link>
     </div>
   );
 }
