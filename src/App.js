@@ -1,74 +1,52 @@
-import logo from "./logo.svg";
 import "./App.css";
+import BankForm from "./BankForm";
+import { Route, Routes } from "react-router";
+import Hello from "./hello";
+import Post from "./Post";
+import {PostsContext} from "./contexts/PostsContexts"
+import { UserContext } from "./contexts/UserContext";
+import NotFound from "./NotFound";
 
-import { useState } from "react";
 
 function App() {
-	const [firstNumberInput, setFirstNumberInput] = useState(null);
-	const [secondNumberInput, setSecondNumberInput] = useState(null);
-	const [result, setResult] = useState(null);
+  const postsData = [
+          {id:1, title:"post 1", body:"post 1 body"},
+          {id:2, title:"post 2", body:"post 2 body"},
+          {id:3, title:"post 3", body:"post 3 body"},
+          {id:4, title:"post 4", body:"post 4 body"},
+          {id:5, title:"post 5", body:"post 5 body"},
+      ]
+  
+  
+  return (
+    <PostsContext.Provider value={postsData}>
+    <Routes>
+      <Route path="/hello" element={<Hello />} />
+      <Route
+        path="/"
+        element={
+          <UserContext.Provider
+            value={{
+              userName: "anany",
+              name: "ahmed anany",
+              email: "anany@gmail.com",
+            }}
+          >
+            <div className="App">
+              {/* Bank Form  */}
+              <BankForm />
 
-	// EVENT HANDLERS
-	function handleSumClick() {
-		const result = Number(firstNumberInput) + Number(secondNumberInput);
-		setResult(result);
-	}
+              {/* posts and side menu */}
+            </div>
+          </UserContext.Provider>
+        }
+      />
+      <Route path="/post/:id" element={<Post />} />
+      <Route path="*" element={<NotFound/>}></Route>
 
-	function handleSubClick() {
-		const result = Number(firstNumberInput) - Number(secondNumberInput);
-		setResult(result);
-	}
-
-	function handleMultClick() {
-		const result = Number(firstNumberInput) * Number(secondNumberInput);
-		setResult(result);
-	}
-
-	function handleDivClick() {
-		const result = Number(firstNumberInput) / Number(secondNumberInput);
-		setResult(result);
-	}
-
-	return (
-		<div className="App">
-			<div
-				style={{
-					height: "100vh",
-					display: "flex",
-					justifyContent: "center",
-					flexDirection: "column",
-					alignItems: "center",
-					background: "teal",
-				}}
-			>
-				{/* FIRST INPUT */}
-				<label>First Number</label>
-				<input
-					value={firstNumberInput}
-					onChange={(e) => setFirstNumberInput(e.target.value)}
-				/>
-
-				{/* SECOND INPUT */}
-				<label>Second Number</label>
-				<input
-					value={secondNumberInput}
-					onChange={(e) => setSecondNumberInput(e.target.value)}
-				/>
-
-				<button onClick={handleSumClick}>sum</button>
-
-				<button onClick={handleSubClick}>subtract</button>
-
-				<button onClick={handleMultClick}>multiply</button>
-
-				<button onClick={handleDivClick}>divide</button>
-
-				<hr />
-
-				<h2>{result}</h2>
-			</div>
-		</div>
-	);
+    </Routes>
+    </PostsContext.Provider>
+  );
 }
 
 export default App;
