@@ -1,32 +1,35 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 import { useState } from "react";
+import { useSelector, useDispatch } from 'react-redux'
+import { sum, subtract, multiply, divide } from './features/calcs/calcSlice'
+
 
 function App() {
-	const [firstNumberInput, setFirstNumberInput] = useState(null);
-	const [secondNumberInput, setSecondNumberInput] = useState(null);
-	const [result, setResult] = useState(null);
+	const [firstNumberInput, setFirstNumberInput] = useState(0);
+	const [secondNumberInput, setSecondNumberInput] = useState(0);
+  const resultState = useSelector((state) => state.calc.result)
+  const dispatch = useDispatch()
+  
+ 
 
 	// EVENT HANDLERS
 	function handleSumClick() {
-		const result = Number(firstNumberInput) + Number(secondNumberInput);
-		setResult(result);
+		// const result = Number(firstNumberInput) + Number(secondNumberInput);
+		// setResult(result);
+    dispatch(sum({firstNumber: Number(firstNumberInput), secondNumber: Number(secondNumberInput)}))
 	}
 
 	function handleSubClick() {
-		const result = Number(firstNumberInput) - Number(secondNumberInput);
-		setResult(result);
+		dispatch(subtract({firstNumber: Number(firstNumberInput), secondNumber: Number(secondNumberInput)}))
 	}
 
 	function handleMultClick() {
-		const result = Number(firstNumberInput) * Number(secondNumberInput);
-		setResult(result);
+		dispatch(multiply({firstNumber: Number(firstNumberInput), secondNumber: Number(secondNumberInput)}))
 	}
 
 	function handleDivClick() {
-		const result = Number(firstNumberInput) / Number(secondNumberInput);
-		setResult(result);
+		dispatch(divide({firstNumber: Number(firstNumberInput), secondNumber: Number(secondNumberInput)}))
 	}
 
 	return (
@@ -65,7 +68,7 @@ function App() {
 
 				<hr />
 
-				<h2>{result}</h2>
+				<h2>{resultState}</h2>
 			</div>
 		</div>
 	);
